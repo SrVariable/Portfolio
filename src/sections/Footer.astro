@@ -1,0 +1,28 @@
+---
+import GitHub from "../components/GitHub.astro";
+import LinkedIn from "../components/LinkedIn.astro";
+---
+
+<footer
+  class="flex flex-col bg-primary-light p-4 text-white justify-center items-center gap-2"
+>
+  <p>SrVariable</p>
+  <div class="flex flex-row gap-3">
+    <a
+      href="https://github.com/SrVariable"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-theme-yellow"
+    >
+      <GitHub />
+    </a>
+    <a
+      href="https://linkedin.com/in/SrVariable"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-theme-yellow"
+    >
+      <LinkedIn />
+    </a>
+  </div>
+</footer>

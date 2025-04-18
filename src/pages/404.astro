@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../sections/Footer.astro";
+---
+
+<Layout title="Page not found">
+  <main
+    class="flex flex-col justify-center items-center min-h-screen text-center"
+  >
+    <h1 class="text-6xl mb-4 uppercase text-primary font-bold">404</h1>
+    <h2 class="text-4xl mb-4 uppercase text-white max-w-60 font-bold">
+      Page not found
+    </h2>
+    <p class="text-balance text-2xl mx-4 mb-4 text-white max-w-60">
+      Feeling lost? Don't worry you can
+    </p>
+    <a
+      href="/"
+      class="text-white bg-primary-light rounded-full px-8 py-3 text-2xl uppercase"
+      >Go Home</a
+    >
+  </main>
+  <Footer />
+</Layout>
