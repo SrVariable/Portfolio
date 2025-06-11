@@ -2,46 +2,64 @@
 import GitHub from "../components/GitHub.astro";
 import LinkedIn from "../components/LinkedIn.astro";
 import Email from "../components/Email.astro";
+import Button from "../components/Button.astro";
 ---
 
-<section class="flex flex-col w-full px-4 mt-20 text-white">
-  <div class="flex flex-row">
-    <img
-      src="/images/Chopper.webp"
-      alt="An image of Chopper sitting in V logo"
-      class="rounded-full m-2 size-24 border-3 border-white"
-    />
-    <div class="flex flex-col justify-center items-center">
-      <h1 class="text-4xl font-bold">SrVariable</h1>
+<section class="flex flex-col md:flex-row justify-center align-center w-full px-4 my-20 text-white">
+  <img
+    src="/images/Chopper.webp"
+    alt="An image of Chopper sitting in V logo"
+    class="rounded-full m-2 mr-8 size-30 md:rounded-full md:size-44 border-3 border-white self-center"
+  />
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-bold mb-4">SrVariable</h1>
+    <p class="text-lg italic mb-4 text-theme-white font-bold bg-primary-shade px-4">
+      I know more than I believe and less than you think
+    </p>
+    <div class="flex flex-col">
+      <p class="text-lg self-start text-start mb-4 max-w-xl">
+        +2 years of experience. Software Developer from Málaga, Spain.
+        +2 years of experience. Software Developer from Málaga, Spain.
+        +2 years of experience. Software Developer from Málaga, Spain.
+        +2 years of experience. Software Developer from Málaga, Spain.
+        +2 years of experience. Software Developer from Málaga, Spain.
+      </p>
     </div>
-  </div>
-  <p class="text-lg italic mb-4 text-theme-white font-bold">
-    I know more than I believe and less than you think
-  </p>
-  <p class="text-lg self-start text-start mb-4">
-    +2 years of experience. Software Developer from Málaga, Spain.
-  </p>
-  <div
-    class="flex flex-row self-start gap-4 bg-primary-shade px-4 py-2 rounded-full"
-  >
-    <a
-      href="https://github.com/SrVariable"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:text-theme-yellow"
-    >
-      <GitHub />
-    </a>
-    <a
-      href="https://linkedin.com/in/SrVariable"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:text-theme-yellow"
-    >
-      <LinkedIn />
-    </a>
-    <a href="mailto:rojohnibana@gmail.com" class="hover:text-theme-yellow">
-      <Email />
-    </a>
+    <div class="flex flex-wrap justify-center gap-2">
+      <div
+        class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full"
+      >
+        <a href="mailto:rojohnibana@gmail.com" class="flex gap-2 text-theme-black hover:text-theme-white">
+          <Email />
+          rojohnibana@gmail.com
+        </a>
+      </div>
+      <div
+        class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full"
+      >
+        <a
+          href="https://linkedin.com/in/SrVariable"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex gap-2 text-theme-black hover:text-theme-white"
+        >
+          <LinkedIn />
+          LinkedIn
+        </a>
+      </div>
+      <div
+        class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full"
+      >
+        <a
+          href="https://github.com/SrVariable"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex gap-2 text-theme-black hover:text-theme-white"
+        >
+          <GitHub />
+          GitHub
+        </a>
+      </div>
+    </div>
   </div>
 </section>

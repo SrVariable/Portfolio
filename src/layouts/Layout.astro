@@ -12,7 +12,11 @@ import Header from "../sections/Header.astro";
     <meta name="generator" content="Astro" />
     <title>SrVariable Portfolio</title>
   </head>
-  <body class="bg-theme-blue-tint text-white">
+  <body class="relative h-full w-full bg-slate-950 text-theme-black dark:text-theme-white">
+    <div class="-z-10 fixed w-full bg-slate-950">
+      <div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,#6f93d944,rgba(255,255,255,0))]"></div>
+      <div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,#6f93d944,rgba(255,255,255,0))]"></div>
+    </div>
     <Header />
     <slot />
   </body>

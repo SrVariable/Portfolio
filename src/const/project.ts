@@ -41,7 +41,6 @@ export const PROJECTS = [
         name: 'PascuiBOT - A Discord bot for personal use',
         description: 'Discord bot for personal use. Initially developed in Python, then migrated to Go.',
         technologies: [
-            'Python',
             'Go',
             'Docker',
             'Git',

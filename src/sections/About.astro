@@ -1,23 +1,29 @@
+---
+import SectionTitle from "../components/SectionTitle.astro"
+---
+
 <section id="about" class="m-4">
-  <h1 class="text-3xl font-bold mb-4">🦔 About me 🦔</h1>
+  <SectionTitle>🦔 About me 🦔</SectionTitle>
   <article class="flex flex-col justify-center items-center">
     <img
       class="w-64 rounded-xl p-3 pb-0 bg-primary-tint mb-4 border-4 border-theme-white hover:bg-primary"
       src="/images/me.webp"
       alt="The face of SrVariable"
     />
-    <p class="mb-2">
-      My name is Rojohn, but I'm usually known as <strong
-        class="text-theme-yellow">SrVariable</strong
-      >, or just Variable.
-    </p>
-    <p class="mb-2">
-      I'm currently studying in both <strong class="text-theme-yellow"
-        >42 Málaga</strong
-      > and <strong class="text-theme-yellow">IES Salduba</strong>.
-    </p>
-    <p class="mb-2">
-      One of my goals is to learn enough to know that I didn't learn enough.
-    </p>
+    <section>
+      <p class="mb-2">
+        My name is Rojohn, but I'm usually known as <strong
+          class="text-theme-yellow">SrVariable</strong
+        >, or just Variable.
+      </p>
+      <p class="mb-2">
+        I'm currently studying in both <strong class="text-theme-yellow"
+          >42 Málaga</strong
+        > and <strong class="text-theme-yellow">IES Salduba</strong>.
+      </p>
+      <p class="mb-2">
+        One of my goals is to learn enough to know that I didn't learn enough.
+      </p>
+    </section>
   </article>
 </section>
