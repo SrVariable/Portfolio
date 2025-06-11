@@ -4,28 +4,35 @@ import SectionTitle from "../components/SectionTitle.astro"
 
 <section id="about" class="m-4">
   <SectionTitle>🦔 About me 🦔</SectionTitle>
-  <article class="flex flex-col justify-center items-center">
-    <div class="flex duration-100 ease-in hover:rotate-5">
-    <img
-      class="w-48 sm:w-64 rounded-xl p-3 pb-0 bg-linear-to-t from-[#222] to-[#333] mb-4 border-4 border-theme-white hover:bg-linear-to-t hover:from-[#f7b1b933] hover:to-[#d86573aa]"
-      src="/images/me.webp"
-      alt="The face of SrVariable"
-      loading="lazy"
-    />
+  <article class="flex flex-col md:flex-row gap-4 md:gap-16 justify-center items-center">
+    <div class="flex mb-2 duration-100 ease-in hover:rotate-5">
+      <img
+        class="w-54 sm:w-64 rounded-xl p-3 pb-0 bg-linear-to-t from-[#222] to-[#333] border-4 border-theme-white hover:bg-linear-to-t hover:from-[#f7b1b933] hover:to-[#d86573aa]"
+        src="/images/me.webp"
+        alt="The face of SrVariable"
+        loading="lazy"
+      />
     </div>
-    <section>
-      <p class="mb-2">
-        My name is Rojohn, but I'm usually known as <strong
-          class="text-theme-yellow">SrVariable</strong
-        >, or just Variable.
+    <section class="flex flex-col max-w-xl">
+      <p class="mb-4">
+        My name is Rojohn, but I'm usually known as <strong class="text-theme-yellow">SrVariable</strong>, or just Variable.
+        I've been using a computer since I was 5. However, my programming journey started when I was 16, in highschool.
+        I was introduced to algorithms, creating simple games in <strong class="text-theme-yellow">Scratch</strong>.
+        The next year, I used <strong class="text-theme-yellow">PSeInt</strong> to dive more into programming and then switched to
+        <strong class="text-theme-yellow">Java</strong>. I also learnt about <strong class="text-theme-yellow">HTML</strong>,
+        <strong class="text-theme-yellow">CSS</strong> and <strong class="text-theme-yellow">WordPress</strong> and develop web pages.
       </p>
-      <p class="mb-2">
-        I'm currently studying in both <strong class="text-theme-yellow"
-          >42 Málaga</strong
-        > and <strong class="text-theme-yellow">IES Salduba</strong>.
+      <p class="mb-4">
+        Nowadays I'm studying in <em class="text-theme-yellow">42 Málaga</em>, a place where I enhance
+        and learn the fundamentals of programming using <strong class="text-theme-yellow">C</strong> and
+        <strong class="text-theme-yellow">C++</strong>. Alongside 42, I'm studying a
+        <strong class="text-theme-yellow">Higher Technician in Web Application Development</strong> in
+        <em class="text-theme-yellow">IES Salduba</em>.
       </p>
-      <p class="mb-2">
-        One of my goals is to learn enough to know that I didn't learn enough.
+      <p class="mb-4">
+        I'm <strong>very curious</strong>, that's why I'm always learning new things. This provides me <strong>strong knowledge</strong>
+        that I usually share with my peers. Actually, one of my goals is to <strong class="text-theme-yellow">learn enough to understand
+        that there is a lot to learn</strong>.
       </p>
     </section>
   </article>
