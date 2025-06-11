@@ -45,5 +45,6 @@ export const PROJECTS = [
             'Docker',
             'Git',
         ],
+        image: '/images/pascuibot.webp',
     },
 ]
