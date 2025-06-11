@@ -33,7 +33,7 @@ import SectionTitle from "../components/SectionTitle.astro";
         <p class="mb-4">{description}</p>
       </div>
       {(source || url) && (
-      <footer>
+      <footer class="flex">
         {source && (
         <Button url={url}>Source</Button>
         )}
