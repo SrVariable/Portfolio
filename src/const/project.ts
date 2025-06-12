@@ -1,7 +1,7 @@
 export const PROJECTS = [
     {
         name: 'Mongo exporter - A simple metric exporter',
-        description: 'Metric exporter for a MongoDB database. It collects metrics from a database and exposes them in a format that can be scraped by Prometheus and displayed in Grafana. Developed in Go as part of my intership in iAR Soft.',
+        description: 'Metric exporter for a MongoDB database. It collects metrics from a database and exposes them in a format that can be scraped by Prometheus and displayed in Grafana. Developed in Go as part of my internship in iAR Soft.',
         technologies: [
             'Go',
             'Docker',
