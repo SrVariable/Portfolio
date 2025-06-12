@@ -21,6 +21,8 @@ import SectionTitle from "../components/SectionTitle.astro";
           </li>
           ))}
         </ul>
+      </div>
+      <div class="flex flex-col flex-grow-1">
         {image && (
         <img
           class="rounded-sm mb-2 w-auto"
@@ -29,8 +31,6 @@ import SectionTitle from "../components/SectionTitle.astro";
           loading="lazy"
         />
         )}
-      </div>
-      <div>
         <p class="mb-4">{description}</p>
       </div>
       {(source || url) && (
