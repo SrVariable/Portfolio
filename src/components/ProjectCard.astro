@@ -1,50 +1,43 @@
 ---
-import { PROJECTS } from "../const/project.ts";
 import Button from "../components/Button.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+
+const { project } = Astro.props;
+const { name, description, image, technologies, source, url } = project;
 ---
 
-<section class="m-4 flex flex-col scroll-mt-20" id="projects">
-  <SectionTitle>🌊 Projects 🌊</SectionTitle>
-  <div class="flex flex-wrap gap-4 justify-center">
-    {
-    PROJECTS.map(({ name, description, image, technologies, source, url }) => (
-    <article class="flex flex-col justify-between bg-linear-to-t from-[#222] to-[#333] text-theme-white p-4 mb-8 rounded-xl w-sm hover:bg-linear-to-t hover:from-[#f7b1b933] hover:to-[#d86573aa]">
-      <div>
-        <h1 class="text-2xl font-bold mb-4">{name}</h1>
-        <ul class="flex flex-wrap gap-2 mb-4 space-y-1">
-          {technologies.map((tech) => (
-          <li>
-            <span class="bg-linear-85 from-theme-blue to-theme-blue-shade text-theme-white px-2 py-1 rounded-full">
-              {tech}
-            </span>
-          </li>
-          ))}
-        </ul>
-      </div>
-      <div class="flex flex-col flex-grow-1">
-        {image && (
-        <img
-          class="rounded-sm mb-2 w-auto"
-          src={image}
-          alt={`Screenshot of ${name}`}
-          loading="lazy"
-        />
-        )}
-        <p class="mb-4">{description}</p>
-      </div>
-      {(source || url) && (
-      <footer class="flex">
-        {source && (
-        <Button url={source}>Source</Button>
-        )}
-        {url && (
-        <Button url={url}>Preview</Button>
-        )}
-      </footer>
-      )}
-    </article>
-    ))
-    }
+<article class="flex flex-col justify-between bg-linear-to-t from-[#222] to-[#333] text-theme-white p-4 mb-8 rounded-xl w-sm hover:bg-linear-to-t hover:from-[#f7b1b933] hover:to-[#d86573aa]">
+  <div>
+    <h1 class="text-2xl font-bold mb-4">{name}</h1>
+    <ul class="flex flex-wrap gap-2 mb-4 space-y-1">
+      {technologies.map((tech) => (
+      <li>
+        <span class="bg-linear-85 from-theme-blue to-theme-blue-shade text-theme-white px-2 py-1 rounded-full">
+          {tech}
+        </span>
+      </li>
+      ))}
+    </ul>
   </div>
-</section>
+  <div class="flex flex-col flex-grow-1">
+    {image && (
+    <img
+      class="rounded-sm mb-2 w-auto"
+      src={image}
+      alt={`Screenshot of ${name}`}
+      loading="lazy"
+    />
+    )}
+    <p class="mb-4">{description}</p>
+  </div>
+  {(source || url) && (
+  <footer class="flex">
+    {source && (
+    <Button url={source}>Source</Button>
+    )}
+    {url && (
+    <Button url={url}>Preview</Button>
+    )}
+  </footer>
+  )}
+</article>
