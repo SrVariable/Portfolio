@@ -1,0 +1,16 @@
+---
+import SectionTitle from "../components/SectionTitle.astro"
+import { WORKS } from "../const/work.ts"
+---
+<section id="experience" class="flex flex-col align-center mb-4 scroll-mt-20">
+  <SectionTitle>💼 Experience 💼</SectionTitle>
+  {
+    WORKS.map(({ company, role, duration, description }) => (
+      <article class="flex flex-col gap-1 max-w-sm md:max-w-xl self-center">
+        <h1 class="text-xl font-bold text-theme-yellow">{role} at {company}</h1>
+        <h2 class="text-sm italic mb-2">{duration}</h2>
+        <p class="text-md text-pretty">{description}</p>
+      </article>
+    ))
+  }
+</section>
