@@ -2,22 +2,54 @@
   <nav
     class="bg-[radial-gradient(circle_farthest-side,#d86573dd,#020618ee)] text-white mx-2 p-2 flex justify-center items-center text-nowrap"
   >
-  <ul class="flex gap-4 overflow-scroll mx-8 no-scrollbar">
-      <li>
-        <a href="/#" class="hover:text-theme-yellow">Home</a>
-      </li>
-      <li>
-        <a href="/#projects" class="hover:text-theme-yellow">Projects</a>
-      </li>
-      <li>
-        <a href="/#experience" class="hover:text-theme-yellow">Experience</a>
-      </li>
-      <li>
-        <a href="/#education" class="hover:text-theme-yellow">Education</a>
-      </li>
-      <li>
-        <a href="/#about" class="hover:text-theme-yellow">About me</a>
-      </li>
+    <ul id="navbar" class="flex gap-4 overflow-scroll mx-8 no-scrollbar">
+        <li>
+          <a href="/#home" data-section="home" class="hover:text-theme-yellow hover:font-bold">Home</a>
+        </li>
+        <li>
+          <a href="/#projects" data-section="projects" class="hover:text-theme-yellow hover:font-bold">Projects</a>
+        </li>
+        <li>
+          <a href="/#experience" data-section="experience" class="hover:text-theme-yellow hover:font-bold">Experience</a>
+        </li>
+        <li>
+          <a href="/#education" data-section="education" class="hover:text-theme-yellow hover:font-bold">Education</a>
+        </li>
+        <li>
+          <a href="/#about" data-section="about" class="hover:text-theme-yellow hover:font-bold">About me</a>
+        </li>
     </ul>
+  <script>
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navLinks = document.querySelectorAll('#navbar a');
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY + window.innerHeight / 3;
+
+      let currentId = sections[0].id;
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          currentId = section.id;
+        }
+      }
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-[#ffd300]', 'font-bold');
+        if (link.dataset.section === currentId) {
+          link.classList.add('text-[#ffd300]', 'font-bold');
+        }
+      });
+
+      const activeLink = document.querySelector(`#navbar a[data-section="${currentId}"]`);
+      if (activeLink) {
+        const navbar = document.getElementById('navbar');
+        const offset = activeLink.offsetLeft - (navbar.clientWidth / 2) + (activeLink.clientWidth / 2);
+        navbar.scrollTo({
+          left: offset,
+          behavior: 'smooth',
+        });
+      }
+    });
+    </script>
   </nav>
 </header>
