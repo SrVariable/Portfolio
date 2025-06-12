@@ -1,0 +1,20 @@
+---
+import SectionTitle from "../components/SectionTitle.astro"
+import { EDUCATIONS } from "../const/education.ts"
+---
+
+<section id="education" class="flex flex-col mb-8 scroll-mt-20">
+  <SectionTitle>📖 Education 📖</SectionTitle>
+  <section class="flex flex-col gap-10 self-center mx-5">
+  {
+    EDUCATIONS.map(({ title, source, duration, description }) => (
+      <article class="flex flex-col gap-1 md:w-2xl">
+        <h1 class="text-xl font-bold text-theme-yellow">{title}</h1>
+        <h2 class="text-sm">{source}</h2>
+        <h3 class="text-sm italic mb-2">{duration}</h3>
+        <p class="text-md">{description}</p>
+      </article>
+    ))
+  }
+  </section>
+</section>
