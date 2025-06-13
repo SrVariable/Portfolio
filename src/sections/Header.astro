@@ -4,16 +4,16 @@
   >
     <ul id="navbar" class="flex gap-4 overflow-scroll mx-8 no-scrollbar">
         <li>
-          <a href="/#projects" data-section="projects" class="hover:text-theme-yellow hover:font-bold">Projects</a>
+          <a href="/#projects" data-section="projects" class="hover:text-theme-yellow-shade hover:font-bold">Projects</a>
         </li>
         <li>
-          <a href="/#experience" data-section="experience" class="hover:text-theme-yellow hover:font-bold">Experience</a>
+          <a href="/#experience" data-section="experience" class="hover:text-theme-yellow-shade hover:font-bold">Experience</a>
         </li>
         <li>
-          <a href="/#education" data-section="education" class="hover:text-theme-yellow hover:font-bold">Education</a>
+          <a href="/#education" data-section="education" class="hover:text-theme-yellow-shade hover:font-bold">Education</a>
         </li>
         <li>
-          <a href="/#about" data-section="about" class="hover:text-theme-yellow hover:font-bold">About me</a>
+          <a href="/#about" data-section="about" class="hover:text-theme-yellow-shade hover:font-bold">About me</a>
         </li>
     </ul>
   <script>
@@ -31,9 +31,9 @@
       }
 
       navLinks.forEach(link => {
-        link.classList.remove('text-[#ffd300]', 'font-bold');
+        link.classList.remove('text-theme-yellow-shade', 'font-bold');
         if (link.dataset.section === currentId) {
-          link.classList.add('text-[#ffd300]', 'font-bold');
+          link.classList.add('text-theme-yellow-shade', 'font-bold');
         }
       });
 
