@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../sections/Header.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
 <!doctype html>
@@ -18,6 +19,9 @@ import Header from "../sections/Header.astro";
       <div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,#6f93d944,rgba(255,255,255,0))]"></div>
     </div>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
