@@ -4,57 +4,71 @@ import LinkedIn from "../components/LinkedIn.astro";
 import Email from "../components/Email.astro";
 ---
 
-<section id="hero" class="flex flex-col md:flex-row justify-center align-center w-full px-4 my-20 mb-10 text-white scroll-mt-20">
+<section id="hero" class="flex flex-col md:flex-row
+                          justify-center items-center
+                          min-h-120 w-full px-4 my-25 mb-10
+                          text-white
+                          scroll-mt-20">
   <img
     src="/images/chopper.webp"
     alt="An image of Chopper sitting in V logo"
-    class="rounded-full mb-2 size-30 md:rounded-full md:size-44 border-3 border-white self-center"
+    class="self-center rounded-full
+            mb-2 size-30
+            border-3 border-theme-white
+            md:rounded-full md:size-44"
   />
   <div class="flex flex-col items-center">
-    <h1 class="text-4xl font-bold mb-4 text-center">Yow, I'm <span class="text-theme-yellow font-bold">SrVariable</span> 👋</h1>
-    <small class="text-lg italic mb-4 text-theme-white font-bold bg-linear-to-r from-primary-shade-2 to-primary-shade px-4">
+    <h1 class="text-3xl sm:text-4xl mb-4 font-bold text-center">
+      Yow, I'm <strong class="text-theme-yellow">SrVariable</strong> 👋
+    </h1>
+    <h2 class="text-lg text-center text-theme-white text-shadow-lg
+              px-4 mb-4 italic font-bold 
+              bg-linear-to-r from-primary-shade-2 to-primary-shade inset-shadow-black inset-shadow-md">
       I know more than I believe and less than you think
-    </small>
+    </h2>
     <div class="flex flex-col">
-      <p class="text-lg text-pretty mb-4 max-w-xl sm:pl-8">
-      +2 years of experience. <strong class="text-theme-yellow">Software Developer</strong> from Málaga, Spain.
-      Specialised in <strong class="text-theme-yellow">solving problems</strong> and currently looking for my next challenge.
+      <p class="text-lg text-center mb-4 max-w-xl sm:pl-8">
+        +3 years of experience. <strong class="text-theme-yellow">Software Developer</strong> from Málaga, Spain.
+        Specialised in <strong class="text-theme-yellow">solving problems</strong> and currently looking for my next challenge.
       </p>
     </div>
-    <nav>
-      <ul class="flex flex-wrap justify-center gap-4">
-        <li
-          class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full hover:scale-110"
-        >
+    <nav class="w-full xsm:w-120">
+      <ul class="grid grid-cols-1 xsm:grid-cols-3 gap-4 justify-center">
+        <li class="rounded-2xl p-2 
+                    bg-linear-to-tl from-primary-shade-2 to-primary-shade
+                    inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black">
           <a
             href="https://github.com/SrVariable"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex gap-2 text-theme-black hover:text-theme-white"
+            class="flex gap-2 ml-2 text-theme-white hover:text-shadow-white hover:text-shadow-sm"
           >
             <GitHub />
             GitHub
           </a>
         </li>
-        <li
-          class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full hover:scale-110"
-        >
+        <li class="rounded-2xl p-2
+                    bg-linear-to-tl from-primary-shade-2 to-primary-shade
+                    inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black
+                    hover:text-shadow-theme-white hover:text-shadow-md">
           <a
             href="https://linkedin.com/in/SrVariable"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex gap-2 text-theme-black hover:text-theme-white"
+            class="flex gap-2 ml-2 text-theme-white"
           >
             <LinkedIn />
             LinkedIn
           </a>
         </li>
-        <li
-          class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full hover:scale-110"
-        >
-          <a href="mailto:rojohnibana@gmail.com" class="flex gap-2 text-theme-black hover:text-theme-white">
+        <li class="rounded-2xl p-2
+                    bg-linear-to-tl from-primary-shade-2 to-primary-shade
+                    inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black">
+          <a
+            href="mailto:rojohnibana@gmail.com"
+            class="flex gap-2 ml-2 text-theme-white hover:text-shadow-white hover:text-shadow-sm">
             <Email />
-            rojohnibana@gmail.com
+            Contact Me
           </a>
         </li>
       </ul>

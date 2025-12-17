@@ -15,6 +15,9 @@
   --color-theme-yellow-shade: #ffd300;
   --color-theme-black: #222222;
   --color-theme-white: #dddddd;
+  --color-theme-white-shade: #bbbbbb;
+
+  --breakpoint-xsm: 31rem;
 }
 
 @font-face {
