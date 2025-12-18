@@ -33,7 +33,7 @@ import Email from "../components/Email.astro";
       </p>
     </div>
     <nav class="w-full xsm:w-120">
-      <ul class="grid grid-cols-1 xsm:grid-cols-3 gap-4 justify-center">
+      <ul class="grid grid-cols-2 xsm:grid-cols-3 gap-4">
         <li class="rounded-2xl p-2 
                     bg-linear-to-tl from-primary-shade-2 to-primary-shade
                     inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black
@@ -42,7 +42,7 @@ import Email from "../components/Email.astro";
             href="https://github.com/SrVariable"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex gap-2 ml-2 text-theme-white"
+            class="flex justify-center gap-2 text-theme-white"
           >
             <GitHub />
             GitHub
@@ -56,19 +56,19 @@ import Email from "../components/Email.astro";
             href="https://linkedin.com/in/SrVariable"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex gap-2 ml-2 text-theme-white"
+            class="flex justify-center gap-2 text-theme-white"
           >
             <LinkedIn />
             LinkedIn
           </a>
         </li>
-        <li class="rounded-2xl p-2
+        <li class="col-span-full xsm:col-auto rounded-2xl p-2
                     bg-linear-to-tl from-primary-shade-2 to-primary-shade
                     inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black
                     hover:text-shadow-white hover:text-shadow-sm">
           <a
             href="mailto:rojohnibana@gmail.com"
-            class="flex gap-2 ml-2 text-theme-white">
+            class="flex justify-center gap-2 text-theme-white">
             <Email />
             Contact Me
           </a>
