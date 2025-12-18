@@ -5,38 +5,45 @@ const { project } = Astro.props;
 const { name, description, image, technologies, source, url } = project;
 ---
 
-<article class="flex flex-col justify-between bg-linear-to-t from-[#222] to-[#333] text-theme-white p-4 mb-8 rounded-xl w-sm hover:bg-linear-to-t hover:from-[#f7b1b933] hover:to-[#d86573aa]">
-  <div>
-    <h1 class="text-2xl font-bold mb-4">{name}</h1>
+<article class="grid gap-4 md:grid-cols-2 md:gap-10
+                max-w-250 mx-auto
+                p-4 mb-8 rounded-xl">
+  <header>
+    {image && (
+      <img class="rounded-sm p-1 w-full object-cover
+                  bg-linear-to-br from-theme-white to-theme-yellow hover:from-theme-black hover:to-theme-yellow-shade"
+        src={image}
+        alt={`Screenshot of ${name}`}
+        loading="lazy"
+      />
+    )}
+  </header>
+  <div class="flex flex-col">
+    <h1 class="text-2xl font-bold mb-4 text-theme-yellow">{name}</h1>
     <ul class="flex flex-wrap gap-2 mb-4 space-y-1">
       {technologies.map((tech: string) => (
-      <li>
-        <span class="bg-linear-85 from-theme-blue to-theme-blue-shade text-theme-white px-2 py-1 rounded-full">
-          {tech}
-        </span>
-      </li>
+        <li>
+          <span class="bg-linear-120 from-slate-400 to-slate-200
+                    text-theme-black px-2 py-1 rounded-full">
+            {tech}
+          </span>
+        </li>
       ))}
     </ul>
-  </div>
-  <div class="flex flex-col grow">
-    {image && (
-    <img
-      class="rounded-sm mb-2 w-auto"
-      src={image}
-      alt={`Screenshot of ${name}`}
-      loading="lazy"
-    />
-    )}
     <p class="mb-4">{description}</p>
+    <footer class="mt-auto">
+      {(source || url) && (
+        <div class="grid grid-cols-2 gap-4">
+          {source && (
+            url
+            ? <Button url={source}>Source</Button>
+            : <Button extraClass="col-span-full" url={source}>Source</Button>
+          )}
+          {url && (
+            <Button url={url}>Preview</Button>
+          )}
+        </div>
+      )}
+    </footer>
   </div>
-  {(source || url) && (
-  <footer class="flex">
-    {source && (
-    <Button url={source}>Source</Button>
-    )}
-    {url && (
-    <Button url={url}>Preview</Button>
-    )}
-  </footer>
-  )}
 </article>

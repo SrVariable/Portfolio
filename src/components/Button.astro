@@ -1,12 +1,17 @@
 ---
 interface Props {
+  extraClass?: string;
 	url?: string;
 }
 
-const { url = "size-6" } = Astro.props;
+const { extraClass, url } = Astro.props;
 ---
 <a
-  class="flex max-w-fit bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% text-theme-black p-2 rounded-xl mb-4 mr-4 hover:text-theme-white hover:scale-110"
+  class=`${extraClass}
+          p-2 rounded-2xl
+          text-center text-theme-white hover:text-shadow-white hover:text-shadow-sm
+          bg-linear-to-tl from-primary-shade-2 to-primary-shade
+          inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black`
   href={url}
   target="_blank"
   rel="noopener noreferrer"
