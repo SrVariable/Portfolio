@@ -4,12 +4,12 @@ import { WORKS } from "../const/work.ts"
 ---
 
 <section id="experience" class="flex flex-col mb-8 scroll-mt-20">
-  <SectionTitle>💼 Experience 💼</SectionTitle>
+  <SectionTitle>💼 Experiencia 💼</SectionTitle>
   <section class="flex flex-col gap-10 self-center mx-5">
   {
     WORKS.map(({ company, role, duration, description }) => (
       <article class="flex flex-col gap-1 md:w-2xl">
-        <h1 class="text-xl font-bold text-theme-yellow">{role} at {company}</h1>
+        <h1 class="text-xl font-bold text-theme-yellow">{role} en {company}</h1>
         <h2 class="text-sm italic mb-2">{duration}</h2>
         <p class="text-md text-pretty">{description}</p>
       </article>

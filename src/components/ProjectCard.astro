@@ -36,11 +36,11 @@ const { name, description, image, technologies, source, url } = project;
         <div class="grid grid-cols-2 gap-4">
           {source && (
             url
-            ? <Button url={source}>Source</Button>
-            : <Button extraClass="col-span-full" url={source}>Source</Button>
+            ? <Button url={source}>Código</Button>
+            : <Button extraClass="col-span-full" url={source}>Código</Button>
           )}
           {url && (
-            <Button url={url}>Preview</Button>
+            <Button url={url}>Demo</Button>
           )}
         </div>
       )}

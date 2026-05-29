@@ -1,14 +1,14 @@
 export const EDUCATIONS = [
     {
-        title: "Higher Technician in Web Application Development",
+        title: "Grado Superior en Desarrollo de Aplicaciones Web",
         source: "IES Salduba",
-        duration: "September 2024 - Present",
+        duration: "Septiembre 2024 - Mayo 2026",
         description: "",
     },
     {
-        title: "Software Engineering Program",
+        title: "42 Málaga",
         source: "42 Málaga",
-        duration: "April 2023 - Present",
+        duration: "Abril 2023 - Presente",
         description: "",
     },
 ]
