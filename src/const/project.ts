@@ -1,7 +1,7 @@
 export const PROJECTS = [
     {
-        name: 'Mongo exporter - A simple metric exporter',
-        description: 'Metric exporter for a MongoDB database. It collects metrics from a database and exposes them in a format that can be scraped by Prometheus and displayed in Grafana. Developed in Go as part of my internship in iAR Soft.',
+        name: 'Mongo exporter - Exportador de métricas para MongoDB',
+        description: 'Exportador de métricas para MongoDB. Recolecta métricas de una base de datos y los expone en un formato compatible con Prometheus y que posteriormente es mostrado en Grafana. Desarrollado en Go como parte de mis prácticas en iAR Soft.',
         technologies: [
             'Go',
             'Docker',
@@ -14,8 +14,8 @@ export const PROJECTS = [
         source: 'https://github.com/SrVariable/mongo-exporter',
     },
     {
-        name: 'Cub3D - A simple 2.5D game like DOOM',
-        description: 'Simple 2.5D game like DOOM. Using raycasting techniques. Developed in C from scratch using MLX42 (graphic library) as part of the 42 School curriculum.',
+        name: 'Cub3D - Juego en 2.5D',
+        description: 'Un juego 2.5D parecido a DOOM. Desarrollado en C desde cero aplicando técnicas de raycasting y utilizando MLX42 para renderizar los gráficos. Forma parte del currículum de la escuela 42',
         technologies: [
             'C',
             'MLX42',
@@ -26,8 +26,8 @@ export const PROJECTS = [
         source: 'https://github.com/ribana-b/cub3d',
     },
     {
-        name: 'DynSoul - A web page for my fictional company',
-        description: 'Web page for my fictional company. Developed using Astro and TailwindCSS as part of my Web Development Higher Technical Degree.',
+        name: 'DynSoul - Página web de almacenes',
+        description: 'Una página web para mi empresa ficticia de almacenes. Desarrollado utilizando Astro + TailwindCSS como parte de un proyecto de Digitalización en el Grado Superior de Desarrollo de Aplicaciones Web',
         technologies: [
             'Astro',
             'TailwindCSS',
@@ -38,8 +38,8 @@ export const PROJECTS = [
         url: 'https://dynsoul.vercel.app/',
     },
     {
-        name: 'PascuiBOT - A Discord bot for personal use',
-        description: 'Discord bot for personal use. Initially developed in Python, then migrated to Go.',
+        name: 'PascuiBOT - Bot de Discord para uso personal',
+        description: 'Una bot de Discord para uso personal. Inicialmente desarrollado en Python y posteriormente migrado a Go',
         technologies: [
             'Go',
             'Docker',

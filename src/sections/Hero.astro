@@ -1,62 +1,69 @@
 ---
-import GitHub from "../components/GitHub.astro";
-import LinkedIn from "../components/LinkedIn.astro";
-import Email from "../components/Email.astro";
+import { LINKS } from "../const/link.ts"
 ---
 
-<section class="flex flex-col md:flex-row justify-center align-center w-full px-4 my-20 mb-10 text-white">
-  <img
-    src="/images/chopper.webp"
-    alt="An image of Chopper sitting in V logo"
-    class="rounded-full mb-2 size-30 md:rounded-full md:size-44 border-3 border-white self-center"
-  />
-  <div class="flex flex-col items-center">
-    <h1 class="text-4xl font-bold mb-4 text-center">Yow, I'm <span class="text-theme-yellow font-bold">SrVariable</span> 👋</h1>
-    <small class="text-lg italic mb-4 text-theme-white font-bold bg-linear-to-r from-primary-shade-2 to-primary-shade px-4">
-      I know more than I believe and less than you think
-    </small>
-    <div class="flex flex-col">
-      <p class="text-lg text-pretty mb-4 max-w-xl sm:pl-8">
-      +2 years of experience. <strong class="text-theme-yellow">Software Developer</strong> from Málaga, Spain.
-      Specialised in <strong class="text-theme-yellow">solving problems</strong> and currently looking for my next challenge.
-      </p>
+<section
+  id="hero"
+  class="mx-auto mt-32 mb-20 flex w-full max-w-4xl scroll-mt-24
+         flex-col items-center gap-8 px-4
+         md:flex-row md:items-center md:gap-12"
+>
+  <div class="group size-30 shrink-0 [perspective:1000px] md:size-44">
+    <div
+      class="relative size-full transition-transform duration-500 ease-out
+             [transform-style:preserve-3d] motion-reduce:duration-0
+             group-hover:[transform:rotateY(180deg)]"
+    >
+      <img
+        src="/images/chopper.webp"
+        alt="An image of Chopper sitting in V logo"
+        class="absolute inset-0 size-full rounded-full object-cover
+               ring-2
+               [backface-visibility:hidden] [-webkit-backface-visibility:hidden]"
+      />
+      <img
+        src="/images/me.webp"
+        alt="The face of SrVariable"
+        aria-hidden="true"
+        class="absolute inset-0 size-full rounded-full bg-surface object-cover
+               ring-2
+               [backface-visibility:hidden] [-webkit-backface-visibility:hidden]
+               [transform:rotateY(180deg)]"
+      />
     </div>
-    <nav>
-      <ul class="flex flex-wrap justify-center gap-4">
-        <li
-          class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full hover:scale-110"
-        >
-          <a
-            href="https://github.com/SrVariable"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex gap-2 text-theme-black hover:text-theme-white"
-          >
-            <GitHub />
-            GitHub
-          </a>
-        </li>
-        <li
-          class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full hover:scale-110"
-        >
-          <a
-            href="https://linkedin.com/in/SrVariable"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex gap-2 text-theme-black hover:text-theme-white"
-          >
-            <LinkedIn />
-            LinkedIn
-          </a>
-        </li>
-        <li
-          class="flex self-start gap-4 bg-radial-[at_25%_25%] from-primary-tint to-primary-shade to-75% px-4 py-2 rounded-full hover:scale-110"
-        >
-          <a href="mailto:rojohnibana@gmail.com" class="flex gap-2 text-theme-black hover:text-theme-white">
-            <Email />
-            rojohnibana@gmail.com
-          </a>
-        </li>
+  </div>
+  <div class="flex flex-col items-center text-center md:items-start md:text-left">
+    <h1 class="mb-4 text-4xl font-bold tracking-tight text-balance sm:text-5xl">
+      Yow, soy <span class="text-accent-soft">SrVariable</span> 👋
+    </h1>
+    <p class="mb-6 border-l-2 border-accent-deep/60 pl-4 text-base text-fg-muted italic md:text-lg">
+      Sé más de lo que creo y menos de lo que piensas
+    </p>
+    <p class="mb-8 max-w-xl text-base leading-relaxed text-fg-muted text-pretty">
+      +3 años de experiencia. <strong class="font-semibold text-fg">Desarrollador de Software </strong>
+      de Málaga, España. Especializado en <strong class="font-semibold text-fg">resolver problemas </strong>
+      y buscando mi siguiente reto.
+    </p>
+    <nav class="w-full">
+      <ul class="grid grid-cols-2 gap-3 xsm:grid-cols-3">
+        {
+          LINKS.map(({ label, href, icon: Icon, wide }) => (
+            <li class={wide ? "col-span-full xsm:col-auto" : ""}>
+              <a
+                href={href}
+                target={href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                class="flex items-center justify-center gap-2 rounded-lg
+                       border border-line bg-surface/50 px-4 py-2.5
+                       text-sm text-fg-muted transition-colors duration-200
+                       hover:border-accent-deep hover:bg-surface-hover hover:text-fg"
+              >
+                <Icon styles="size-5" />
+                {label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </div>

@@ -3,18 +3,18 @@ import SectionTitle from "../components/SectionTitle.astro"
 import { EDUCATIONS } from "../const/education.ts"
 ---
 
-<section id="education" class="flex flex-col mb-8 scroll-mt-20">
-  <SectionTitle>📖 Education 📖</SectionTitle>
-  <section class="flex flex-col gap-10 self-center mx-5">
-  {
-    EDUCATIONS.map(({ title, source, duration, description }) => (
-      <article class="flex flex-col gap-1 md:w-2xl">
-        <h1 class="text-xl font-bold text-theme-yellow">{title}</h1>
-        <h2 class="text-sm">{source}</h2>
-        <h3 class="text-sm italic mb-2">{duration}</h3>
-        <p class="text-md">{description}</p>
-      </article>
-    ))
-  }
-  </section>
+<section id="education" class="mx-auto mb-24 w-full max-w-4xl scroll-mt-24 px-4">
+  <SectionTitle>📖 Educación 📖</SectionTitle>
+  <div class="flex flex-col gap-4">
+    {
+      EDUCATIONS.map(({ title, source, duration, description }) => (
+        <article class="rounded-xl border border-line bg-surface/40 p-6 transition-colors duration-200 hover:border-line-strong hover:bg-surface">
+          <h3 class="text-lg font-semibold text-accent">{title}</h3>
+          <p class="mt-1 text-sm text-fg">{source}</p>
+          <p class="mt-1 text-xs tracking-widest text-fg-subtle uppercase">{duration}</p>
+          <p class="mt-4 leading-relaxed text-fg-muted text-pretty">{description}</p>
+        </article>
+      ))
+    }
+  </div>
 </section>

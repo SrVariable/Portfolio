@@ -1,23 +1,49 @@
-<header class="fixed mx-auto z-10 top-4 w-full">
+<header class="fixed inset-x-0 top-4 z-50 px-4">
   <nav
-    class="bg-[radial-gradient(circle_farthest-side,#d86573dd,#020618ee)] text-white mx-2 p-2 flex justify-center items-center text-nowrap"
+    class="mx-auto w-fit max-w-full rounded-full border border-line bg-ink-soft/70 p-1 shadow-lg shadow-black/40 backdrop-blur-md"
   >
-    <ul class="flex gap-4">
+    <ul id="navbar" class="no-scrollbar flex items-center gap-1 overflow-x-auto text-nowrap">
       <li>
-        <a href="/#" class="hover:text-theme-yellow">Home</a>
+        <a href="/#projects" data-section="projects" class="nav-link">Proyectos</a>
       </li>
       <li>
-        <a href="/#projects" class="hover:text-theme-yellow">Projects</a>
+        <a href="/#experience" data-section="experience" class="nav-link">Experiencia</a>
       </li>
       <li>
-        <a href="/#experience" class="hover:text-theme-yellow">Experience</a>
+        <a href="/#education" data-section="education" class="nav-link">Educación</a>
       </li>
       <li>
-        <a href="/#education" class="hover:text-theme-yellow">Education</a>
-      </li>
-      <li>
-        <a href="/#about" class="hover:text-theme-yellow">About me</a>
+        <a href="/#about" data-section="about" class="nav-link">Sobre mí</a>
       </li>
     </ul>
   </nav>
+  <script>
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>('#navbar a');
+    const navbar = document.getElementById('navbar');
+
+    if (sections.length > 0 && navbar) {
+      window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY + window.innerHeight / 3;
+
+        let currentId = sections[0].id;
+        for (const section of sections) {
+          if ((section as HTMLElement).offsetTop <= scrollPos) {
+            currentId = section.id;
+          }
+        }
+
+        navLinks.forEach((link) => {
+          link.classList.toggle('is-active', link.dataset.section === currentId);
+        });
+
+        const activeLink = navbar.querySelector<HTMLAnchorElement>(`a[data-section="${currentId}"]`);
+        if (activeLink) {
+          const offset =
+            activeLink.offsetLeft - navbar.clientWidth / 2 + activeLink.clientWidth / 2;
+          navbar.scrollTo({ left: offset, behavior: 'smooth' });
+        }
+      });
+    }
+  </script>
 </header>
