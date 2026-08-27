@@ -1,24 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../sections/Footer.astro";
 ---
 
-<Layout title="Page not found">
-  <main
-    class="flex flex-col justify-center items-center min-h-screen text-center"
+<Layout title="Página no encontrada · SrVariable">
+  <section
+    class="flex min-h-[70vh] flex-col items-center justify-center px-4 text-center"
   >
-    <h1 class="text-6xl mb-4 uppercase text-primary font-bold">404</h1>
-    <h2 class="text-4xl mb-4 uppercase text-white max-w-60 font-bold">
-      Page not found
-    </h2>
-    <p class="text-balance text-2xl mx-4 mb-4 text-white max-w-60">
-      Feeling lost? Don't worry you can
+    <p class="mb-4 text-7xl font-bold tracking-tight text-accent">404</p>
+    <h1 class="mb-4 text-3xl font-semibold tracking-tight text-fg">
+      Página no encontrada
+    </h1>
+    <p class="mb-8 max-w-sm text-base text-fg-muted text-pretty">
+      ¿Te has perdido? No te preocupes, puedes volver al principio.
     </p>
     <a
       href="/"
-      class="text-white bg-primary-light rounded-full px-8 py-3 text-2xl uppercase hover:text-theme-yellow"
-      >Go Home</a
+      class="rounded-lg border border-line bg-surface/50 px-6 py-2.5 text-sm
+             text-fg-muted transition-colors duration-200
+             hover:border-accent-deep hover:bg-surface-hover hover:text-fg"
     >
-  </main>
-  <Footer />
+      Ir al inicio
+    </a>
+  </section>
 </Layout>

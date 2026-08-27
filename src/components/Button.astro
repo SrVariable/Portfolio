@@ -1,20 +1,19 @@
 ---
 interface Props {
   extraClass?: string;
-	url?: string;
+  url?: string;
 }
 
-const { extraClass, url } = Astro.props;
+const { extraClass = "", url } = Astro.props;
 ---
+
 <a
-  class=`${extraClass}
-          p-2 rounded-2xl
-          text-center text-theme-white hover:text-shadow-white hover:text-shadow-sm
-          bg-linear-to-tl from-primary-shade-2 to-primary-shade
-          inset-shadow-none hover:inset-shadow-sm hover:inset-shadow-black`
+  class={`${extraClass} rounded-lg border border-line bg-surface/50 px-4 py-2
+          text-center text-sm text-fg-muted transition-colors duration-200
+          hover:border-accent-deep hover:bg-surface-hover hover:text-fg`}
   href={url}
   target="_blank"
   rel="noopener noreferrer"
 >
-<slot />
+  <slot />
 </a>

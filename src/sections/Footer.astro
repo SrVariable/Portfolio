@@ -2,44 +2,52 @@
 import Email from "../components/Email.astro";
 import GitHub from "../components/GitHub.astro";
 import LinkedIn from "../components/LinkedIn.astro";
+
+const SOCIALS = [
+  { label: "GitHub", href: "https://github.com/SrVariable", icon: GitHub },
+  { label: "LinkedIn", href: "https://linkedin.com/in/SrVariable", icon: LinkedIn },
+  { label: "Correo", href: "mailto:rojohnibana@gmail.com", icon: Email },
+];
 ---
 
-<footer
-  class="flex flex-col bg-primary-light p-4 text-white justify-center items-center gap-2"
->
-  <p>Desarrollado por SrVariable con <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:text-theme-yellow">Astro</a></p>
-  <div class="flex flex-row gap-3">
+<footer class="mt-16 border-t border-line">
+  <div
+    class="mx-auto flex max-w-4xl flex-col items-center gap-6 p-10
+           sm:flex-row sm:justify-between"
+  >
+    <p class="text-sm text-fg-subtle">
+      Desarrollado por SrVariable con
+      <a
+        href="https://astro.build"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-fg-muted transition-colors duration-200 hover:text-accent"> Astro</a
+      >
+    </p>
+    <ul class="flex items-center gap-5">
+      {
+        SOCIALS.map(({ label, href, icon: Icon }) => (
+          <li>
+            <a
+              href={href}
+              target={href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+              aria-label={label}
+              class="block text-fg-subtle transition-colors duration-200 hover:text-accent"
+            >
+              <Icon styles="size-5" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
     <a
-      href="https://github.com/SrVariable"
+      href="https://github.com/SrVariable/Portfolio"
       target="_blank"
       rel="noopener noreferrer"
-      class="hover:text-theme-yellow"
+      class="text-sm text-fg-subtle transition-colors duration-200 hover:text-accent"
     >
-      <GitHub />
-    </a>
-    <a
-      href="https://linkedin.com/in/SrVariable"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:text-theme-yellow"
-    >
-      <LinkedIn />
-    </a>
-    <a
-      href="mail:rojohnibana@gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hover:text-theme-yellow"
-    >
-      <Email />
+      Código
     </a>
   </div>
-  <a
-    href="https://github.com/SrVariable/Portfolio"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="hover:text-theme-yellow"
-  >
-    Código
-  </a>
 </footer>
