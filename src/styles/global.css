@@ -59,6 +59,10 @@ body {
   border-radius: 4px;
 }
 
+#terminal-input:focus-visible {
+  outline: none;
+}
+
 .site-backdrop {
   position: fixed;
   inset: 0;

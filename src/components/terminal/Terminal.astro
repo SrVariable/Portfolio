@@ -1,0 +1,37 @@
+<div id="terminal-overlay" hidden class="fixed inset-0 z-[100] flex cursor-none items-center justify-center p-4">
+  <div id="terminal-backdrop" class="absolute inset-0 cursor-none bg-ink/70 backdrop-blur-sm"></div>
+  <div
+    id="terminal-window"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Terminal"
+    class="relative w-full max-w-2xl rounded-xl border border-line-strong bg-ink-soft/90 shadow-2xl shadow-black/60 backdrop-blur-md font-mono pointer-events-none select-none"
+  >
+    <!-- Title bar -->
+    <div class="flex items-center gap-2 rounded-t-xl border-b border-line bg-surface/80 px-4 py-2.5">
+      <span class="ml-2 text-xs text-fg-subtle">Terminal</span>
+    </div>
+
+    <!-- Output log -->
+    <div id="terminal-log" class="h-80 overflow-y-auto px-4 py-3 text-sm text-fg-muted">
+      <div id="terminal-output"></div>
+      <div id="terminal-current-line" class="text-fg">
+        <span class="text-accent">srvariable@portfolio:~$ </span
+        ><span
+          id="terminal-input"
+          contenteditable="true"
+          role="textbox"
+          aria-multiline="false"
+          autocapitalize="off"
+          spellcheck="false"
+          class="cursor-none whitespace-pre-wrap break-all bg-transparent text-fg outline-none caret-accent"
+        ></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { initTerminal } from './terminal';
+  initTerminal();
+</script>
