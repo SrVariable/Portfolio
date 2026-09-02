@@ -6,7 +6,6 @@ export const PROJECTS = [
             'Go',
             'Docker',
             'Prometheus',
-            'Git',
             'Grafana',
             'MongoDB',
         ],
@@ -19,7 +18,6 @@ export const PROJECTS = [
         technologies: [
             'C',
             'MLX42',
-            'Git',
             'Makefile',
         ],
         image: '/images/cub3d.webp',
@@ -31,7 +29,6 @@ export const PROJECTS = [
         technologies: [
             'Astro',
             'TailwindCSS',
-            'Git',
         ],
         image: '/images/dynsoul.webp',
         source: 'https://github.com/SrVariable/DynSoul',
@@ -43,7 +40,7 @@ export const PROJECTS = [
         technologies: [
             'Go',
             'Docker',
-            'Git',
+            'MariaDB',
         ],
         image: '/images/pascuibot.webp',
     },
