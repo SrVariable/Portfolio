@@ -22,6 +22,7 @@ export const PROJECTS = [
         ],
         image: '/images/cub3d.webp',
         source: 'https://github.com/ribana-b/cub3d',
+        url: 'https://ribana-b.github.io/cub3d/'
     },
     {
         name: 'DynSoul - Página web de almacenes',
